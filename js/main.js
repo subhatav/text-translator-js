@@ -6,18 +6,12 @@ const selectTag = document.querySelectorAll("select");
 const exchageButton = document.querySelector(".exchange");
 const featureButtons = document.querySelectorAll(".row i");
 
-const translateButton = document.querySelector("button");
+const transButton = document.querySelector(".transBtn");
+const clearButton = document.querySelector(".clearBtn");
 
 fromText.addEventListener("keyup", () => {
 
-  console.log("Inside the EventListener!");
-
-  if (!fromText.value) {
-
-    toText.value = "";
-
-    console.log("Inside the If block!")
-  }
+  if (!fromText.value) toText.value = "";
 });
 
 selectTag.forEach((tag, id) => {
@@ -79,7 +73,7 @@ featureButtons.forEach(featureButton => {
   });
 });
 
-translateButton.addEventListener("click", () => {
+transButton.addEventListener("click", () => {
 
   let text = fromText.value.trim();
 
@@ -104,3 +98,5 @@ translateButton.addEventListener("click", () => {
     toText.setAttribute("placeholder", "Translation of your text!");
   });
 });
+
+clearButton.addEventListener("click", () => { fromText.value = toText.value = ""; });

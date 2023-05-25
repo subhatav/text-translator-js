@@ -31,19 +31,19 @@ body {
 .wrapper {
 
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
 }
 
 .wrapper .text-input {
 
   display: flex;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
 }
 
 .text-input .to-text {
 
   border-radius: 0px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #CCC;
 }
 
 .text-input textarea {
@@ -61,7 +61,7 @@ body {
 
 .text-input textarea::placeholder {
 
-  color: #b7b6b6;
+  color: #B7B6B6;
 }
 
 li,
@@ -89,23 +89,23 @@ li,
 .controls .row .features i {
 
   width: 50px;
-  color: #adadad;
+  color: #ADADAD;
   font-size: 14px;
   cursor: pointer;
-  transition: transform 0.2s ease;
   justify-content: center;
+  transition: transform 0.2s ease;
 }
 
 .controls .row.from .features {
 
   padding-right: 15px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #CCC;
 }
 
 .controls .row.to .features {
 
   padding-left: 15px;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #CCC;
 }
 
 .controls .row select {
@@ -131,7 +131,7 @@ li,
 .text-input textarea::-webkit-scrollbar-track,
 .controls .row select::-webkit-scrollbar-track {
 
-  background: #fff;
+  background: #FFF;
 }
 
 .text-input textarea::-webkit-scrollbar-thumb {
@@ -144,12 +144,12 @@ li,
 
   background: #999;
   border-radius: 8px;
-  border-right: 2px solid #ffffff;
+  border-right: 2px solid #FFFFFF;
 }
 
 .controls .exchange {
 
-  color: #adadad;
+  color: #ADADAD;
   cursor: pointer;
   font-size: 16px;
   transition: transform 0.2s ease;
@@ -162,16 +162,25 @@ li,
 
 .container button {
 
-  width: 100%;
-  padding: 14px;
+  width: calc(100% / 2 - 10px);
   outline: none;
   border: none;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
-  margin-top: 20px;
+  padding: 14px;
   font-size: 17px;
+  margin-top: 20px;
   border-radius: 5px;
+}
+
+.transBtn {
+
   background: #5372F0;
+}
+
+.clearBtn {
+
+  background: #6E6E75;
 }
 
 @media (max-width: 660px) {
@@ -179,6 +188,11 @@ li,
   .container {
 
     padding: 20px;
+  }
+
+  .wrapper {
+
+    margin-bottom: 5px;
   }
 
   .wrapper .text-input {
@@ -189,7 +203,7 @@ li,
   .text-input .to-text {
 
     border-left: 0px;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #CCC;
   }
 
   .text-input textarea {
@@ -202,10 +216,9 @@ li,
     display: none;
   }
 
-  .container button {
+  .buttons {
 
-    padding: 13px;
-    font-size: 16px;
+    flex-direction: column;
   }
 
   .controls .row select {
@@ -216,5 +229,13 @@ li,
   .controls .exchange {
 
     font-size: 14px;
+  }
+
+  .container button {
+
+    width: 100%;
+    padding: 13px;
+    font-size: 16px;
+    margin-top: 15px;
   }
 }
